@@ -54,10 +54,14 @@ extern uint32_t pal_log_lvl;
     if (pal_log_lvl & PAL_LOG_ERR) {                              \
         ALOGE("%s: %d: "  arg, __func__, __LINE__, ##__VA_ARGS__);\
     }
+#if 0
 #define PAL_DBG(log_tag,arg,...)                                           \
     if (pal_log_lvl & PAL_LOG_DBG) {                               \
         ALOGD("%s: %d: "  arg, __func__, __LINE__, ##__VA_ARGS__); \
     }
+#else
+#define PAL_DBG(log_tag,arg,...) do {} while (0)
+#endif
 #define PAL_INFO(log_tag,arg,...)                                         \
     if (pal_log_lvl & PAL_LOG_INFO) {                             \
         ALOGI("%s: %d: "  arg, __func__, __LINE__, ##__VA_ARGS__);\

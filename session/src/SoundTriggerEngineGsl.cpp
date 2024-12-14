@@ -42,7 +42,7 @@
 #include "SoundTriggerPlatformInfo.h"
 
 // TODO: find another way to print debug logs by default
-#define ST_DBG_LOGS
+//#define ST_DBG_LOGS
 #ifdef ST_DBG_LOGS
 #define PAL_DBG(LOG_TAG,...)  PAL_INFO(LOG_TAG,__VA_ARGS__)
 #endif
